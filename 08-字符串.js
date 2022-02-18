@@ -108,3 +108,23 @@ const s2 = () => {
   return maxSubStr;
 };
 console.log(s2());
+
+// 练习题：
+// 给定一个字符串，逐个翻转字符串中的每个单词。例如，输入: "the sky is blue"，输出: "blue is sky the"。
+const reverseWords = s => {
+  const ret = [];
+  let word = [];
+  for (let i = 0; i < s.length; i++) {
+    if (s.charAt(i) === ' ') {
+      word.length > 0 && ret.unshift(word.join(''));
+      word = [];
+    } else {
+      // Add characters to the current word
+      word.push(s.charAt(i));
+    }
+  }
+  // If there is current word exists, add it in front
+  word.length > 0 && ret.unshift(word.join(''));
+  return ret.join(' ');
+};
+console.log(reverseStr('the sky is blue'));
