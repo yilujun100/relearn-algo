@@ -125,8 +125,6 @@ const removeDuplicates = nums => {
     }
   }
   console.log(len);
-  for (let i = 0; i < len; i++) {
-    console.log(nums[i]);
-  }
+  return nums.slice(0, len);
 };
-removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]);
+console.log(removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]));
