@@ -114,8 +114,7 @@ console.log(getScore());
 // 有序，因此只需要去对比 nums[i] 和当前去重数组的最大值是否相等即可。我们用一个 temp 变量保存去重数组的最大值。
 // 如果二者不等，则说明是一个新的数据。我们就需要把这个新数据放到去重数组的最后，并且修改 temp 变量的值，在修改当前去重数组的长度变量
 // len。直到遍历完，就得到了结果。
-const unique = () => {
-  const nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
+const removeDuplicates = nums => {
   let temp = nums[0];
   let len = 1;
   for (let i = 1; i < nums.length; i++) {
@@ -130,4 +129,4 @@ const unique = () => {
     console.log(nums[i]);
   }
 };
-unique();
+removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]);
