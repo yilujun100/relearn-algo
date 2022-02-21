@@ -116,8 +116,8 @@ const reverseWords = s => {
   let word = [];
   for (let i = 0; i < s.length; i++) {
     if (s.charAt(i) === ' ') {
-      word.length > 0 && ret.unshift(word.join(''));
-      word = [];
+      word.length > 0 && ret.unshift(word.join('')); // We found the space, put word in front (if there is any)
+      word = []; // Reset the current word
     } else {
       // Add characters to the current word
       word.push(s.charAt(i));
